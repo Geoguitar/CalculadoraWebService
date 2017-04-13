@@ -20,7 +20,7 @@
 		
 		%>
 		
-		O nome do Cliente é: <%  objCliente.getNome();%>
+		O nome do Cliente é: <%= objCliente.getNome()%>
 		
 		<%
 			Date dataAtual = new Date();
