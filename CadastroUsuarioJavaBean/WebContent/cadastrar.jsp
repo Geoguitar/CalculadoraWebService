@@ -11,35 +11,39 @@
 <body>
 
 	<h1>Cadastrar Usuário</h1>
-	<font color="blue">
-		<h2>Capturando os dados do formulário de entrada do usuário...</h2>
-	</font>
+	
+	<!-- 		Capturando os dados do formulário de entrada do usuário...	 -->		
+		
 	<%
-		String nome = request.getParameter("nomeInput");
-		String endereco = request.getParameter("enderecoInput");
+		//String nome = request.getParameter("nomeInput"); //rescrito na linha 32.
+		//String endereco = request.getParameter("enderecoInput"); //rescrito na linha 35.
 		
 	%>
 
-	<font color="green">
-		<h2>Colocando os dados no objeto usuário..</h2>
-	</font>
+		<!-- Colocando os dados no objeto usuário.. -->
+	
 	<%	
-		//Instanciar o objetoUsuario apartir da classe Usuario
+		String nome,endereco;  //inicializado para as mudanças nas linhas 18 e 19.
+	
+		//Instanciar o objetoUsuario apartir da classe Usuario.
 		Usuario objetoUsuario = new Usuario();
-		objetoUsuario.setNomeUsuario(nome); 
-		objetoUsuario.setEnderecoUsuario(endereco);
+		
+		//objetoUsuario.setNomeUsuario(nome); //rescrito abaixo, mudança da linha 18.
+		objetoUsuario.setNomeUsuario(nome = request.getParameter("nomeInput"));
+		
+		//objetoUsuario.setEnderecoUsuario(endereco); //rescrito abaixo, mudança da linha 19.
+		objetoUsuario.setEnderecoUsuario(endereco = request.getParameter("enderecoInput"));
 	%>
 
-	<font color="black">
-		<h2>Capturando os dados do objetoUsuario...</h2>
-	</font>
+<!-- 		Capturando os dados do objetoUsuario... -->	
+	
 	<%
 		String desNomeUsuario = objetoUsuario.getNomeUsuario();
 		String desEndereco = objetoUsuario.getEnderecoUsuario();
 	%>
 
 	<font color="orange">
-		<h2>Exibindo os dados...</h2>
+		<h2>Exibindo os dados cadastrados...</h2>
 	</font>
 	<table>
 		<tr>
