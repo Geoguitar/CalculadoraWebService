@@ -12,15 +12,14 @@
 
 	<h1>Cadastrar Usuário</h1>
 	
-	<!-- 		Capturando os dados do formulário de entrada do usuário...	 -->		
+	  <!-- Capturando os dados do formulário de entrada do usuário... -->   		
 		
 	<%
-		//String nome = request.getParameter("nomeInput"); //rescrito na linha 32.
-		//String endereco = request.getParameter("enderecoInput"); //rescrito na linha 35.
-		
+		//String nome = request.getParameter("nomeInput"); //rescrito na linha 31.
+		//String endereco = request.getParameter("enderecoInput"); //rescrito na linha 34.
 	%>
 
-		<!-- Colocando os dados no objeto usuário.. -->
+	 <!-- Colocando os dados no objeto usuário.. -->  
 	
 	<%	
 		String nome,endereco;  //inicializado para as mudanças nas linhas 18 e 19.
@@ -35,7 +34,7 @@
 		objetoUsuario.setEnderecoUsuario(endereco = request.getParameter("enderecoInput"));
 	%>
 
-<!-- 		Capturando os dados do objetoUsuario... -->	
+	  <!-- Capturando os dados do objetoUsuario... --> 
 	
 	<%
 		String desNomeUsuario = objetoUsuario.getNomeUsuario();
